@@ -9,7 +9,9 @@ import com.roxy.blog.entity.Blog;
 import com.roxy.blog.entity.Tag;
 import com.roxy.blog.entity.Type;
 import com.roxy.blog.entity.User;
+import com.roxy.blog.exception.AddException;
 import com.roxy.blog.service.BlogService;
+import com.roxy.blog.service.QiNiuService;
 import com.roxy.blog.service.TagService;
 import com.roxy.blog.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,8 @@ public class BlogController {
     private TypeService typeService;
     @Autowired
     private TagService tagService;
+    @Autowired
+    private QiNiuService qiNiuService;
 
     public void setTypeAndTag(Model model) {
         model.addAttribute("types", typeService.getAdminType());
@@ -104,7 +108,6 @@ public class BlogController {
     @PostMapping("/blogs/update")
     public String updateBlog(ShowBlog showBlog, RedirectAttributes attributes) {
         blogService.updateBlog(showBlog);
-//        System.out.println("updateBlog的showBlog" + showBlog);
         attributes.addFlashAttribute("message", "修改成功");
         return "redirect:/admin/blogs";
     }

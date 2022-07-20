@@ -244,3 +244,94 @@
 2022-07-20 18:05:17.630  INFO 16448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-20 18:05:17.631  INFO 16448 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-07-20 18:05:17.640  INFO 16448 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 19:24:34.608  INFO 30228 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 30228 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:24:34.609 DEBUG 30228 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:24:34.610  INFO 30228 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:24:38.881  INFO 30228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:24:38.960  INFO 30228 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:24:39.392  INFO 30228 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.132 seconds (JVM running for 6.041)
+2022-07-20 19:24:40.133  INFO 30228 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:40:36.264  INFO 33324 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 33324 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:40:36.265 DEBUG 33324 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:40:36.265  INFO 33324 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:40:41.375  INFO 33324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:40:41.434  INFO 33324 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:40:41.892  INFO 33324 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 6.019 seconds (JVM running for 7.067)
+2022-07-20 19:40:42.513  INFO 33324 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:41:57.127  INFO 31384 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 31384 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:41:57.128 DEBUG 31384 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:41:57.128  INFO 31384 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:42:01.275  INFO 31384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:42:01.339  INFO 31384 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:42:01.784  INFO 31384 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 4.997 seconds (JVM running for 5.866)
+2022-07-20 19:42:02.282  INFO 31384 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:43:20.384  INFO 33380 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 33380 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:43:20.384 DEBUG 33380 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:43:20.385  INFO 33380 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:43:24.615  INFO 33380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:43:24.671  INFO 33380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:43:25.143  INFO 33380 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.114 seconds (JVM running for 5.982)
+2022-07-20 19:43:25.636  INFO 33380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:45:50.456  INFO 29796 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 29796 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:45:50.457 DEBUG 29796 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:45:50.457  INFO 29796 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:45:55.734  INFO 29796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:45:55.801  INFO 29796 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:45:56.323  INFO 29796 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 6.361 seconds (JVM running for 7.851)
+2022-07-20 19:45:56.926  INFO 29796 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:49:50.268  INFO 4144 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 4144 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:49:50.269 DEBUG 4144 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:49:50.270  INFO 4144 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:49:55.219  INFO 4144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:49:55.286  INFO 4144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:49:55.737  INFO 4144 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.873 seconds (JVM running for 7.013)
+2022-07-20 19:49:56.438  INFO 4144 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:51:23.444  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 31376 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:51:23.445 DEBUG 31376 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:51:23.445  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:51:27.874  INFO 31376 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:51:27.944  INFO 31376 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:51:28.396  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.283 seconds (JVM running for 6.159)
+2022-07-20 19:51:28.942  INFO 31376 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:52:06.868  INFO 9012 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 9012 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:52:06.869 DEBUG 9012 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:52:06.870  INFO 9012 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:52:12.271  INFO 9012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:52:12.342  INFO 9012 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:52:12.926  INFO 9012 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 6.592 seconds (JVM running for 7.77)
+2022-07-20 19:52:13.428  INFO 9012 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:53:29.695  INFO 24304 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 24304 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:53:29.696 DEBUG 24304 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:53:29.697  INFO 24304 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:53:34.297  INFO 24304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:53:34.364  INFO 24304 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:53:34.857  INFO 24304 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.565 seconds (JVM running for 6.626)
+2022-07-20 19:53:35.418  INFO 24304 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:56:07.920  INFO 33672 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 33672 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 19:56:07.921 DEBUG 33672 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 19:56:07.922  INFO 33672 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 19:56:12.342  INFO 33672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 19:56:12.398  INFO 33672 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 19:56:12.854  INFO 33672 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.4 seconds (JVM running for 6.434)
+2022-07-20 19:56:13.355  INFO 33672 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:43:40.867  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 31376 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 20:43:40.868 DEBUG 31376 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 20:43:40.868  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 20:43:45.968  INFO 31376 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:43:46.031  INFO 31376 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 20:43:46.595  INFO 31376 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 6.128 seconds (JVM running for 7.183)
+2022-07-20 20:43:47.311  INFO 31376 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:45:11.090  INFO 29920 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 29920 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 20:45:11.091 DEBUG 29920 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 20:45:11.091  INFO 29920 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 20:45:16.006  INFO 29920 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:45:16.073  INFO 29920 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 20:45:16.578  INFO 29920 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.88 seconds (JVM running for 6.891)
+2022-07-20 20:45:17.112  INFO 29920 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:49:14.132  INFO 22464 --- [main] com.roxy.blog.QiNiuTest                  : Starting QiNiuTest on LAPTOP-HH7CLTTJ with PID 22464 (started by 86186 in H:\study\roxy_blog)
+2022-07-20 20:49:14.133 DEBUG 22464 --- [main] com.roxy.blog.QiNiuTest                  : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 20:49:14.133  INFO 22464 --- [main] com.roxy.blog.QiNiuTest                  : The following profiles are active: dev
+2022-07-20 20:49:18.442  INFO 22464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 20:49:18.494  INFO 22464 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 20:49:18.984  INFO 22464 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.219 seconds (JVM running for 6.106)
+2022-07-20 20:49:19.315  INFO 22464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

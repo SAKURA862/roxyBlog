@@ -2,7 +2,7 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: pro
+    active: dev
   messages:
     basename: i18n/messages
   mvc:
@@ -15,3 +15,6 @@ comment:
 normal_avatar:
   url: "http://cdn.roxysaikou.top/%E5%A4%B4%E5%83%8F/normalUserAvatar/"
   number: 2
+snow_flake:
+  machine_id: 37
+  data_center_id: 3
