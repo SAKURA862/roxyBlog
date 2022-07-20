@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://roxy_blog_mysql:3306/roxy_blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 404notfound.root
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 100MB
+  thymeleaf:
+    cache: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+logging:
+  level:
+    root: info
+    com.roxy.blog: debug
+  file:
+    name: log/blog-pro.log
+# mybatis config
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.roxy.blog.entity
+  configuration:
+    map-underscore-to-camel-case: true

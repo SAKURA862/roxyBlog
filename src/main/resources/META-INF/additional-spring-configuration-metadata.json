@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "comment.avatar",
+      "type": "java.lang.String",
+      "description": "Description for comment.avatar."
+    },
+    {
+      "name": "normal_avatar.url",
+      "type": "java.lang.String",
+      "description": "Description for normal_avatar.url."
+    }
+  ] }

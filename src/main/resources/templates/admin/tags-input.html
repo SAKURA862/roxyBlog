@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签新增</title>
+    <!--通过CDN引入Semantic-UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+<body>
+    <!--导航-->
+    <!--inverted:反色、attached:没有圆角，依附在上面:m-padded-tb-mini:m自己定义,padded,上下之间内部间隔,tb上下,mini小点-->
+    <!--m-shadow-small:自定义导航阴影-->
+    <nav th:replace="admin/_fragments :: menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <!--ui提供的container:提供的宽度固定-->
+        <div class="ui container">
+            <!--stackable:可堆叠,屏幕小的时候会堆叠到一块,用于适应移动端网页适配、menu-item-->
+            <div class="ui inverted secondary stackable menu">
+                <!--teal颜色header-->
+                <h2 class="ui teal header item">管理后台</h2>
+                <!--home icon:图标、m-mobile-hide:自定义按钮隐藏、active:当前活跃-->
+                <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+                <!--right:靠右-->
+                <div class="right m-item m-mobile-hide menu">
+                    <!--ui dropdown:UI下的一个样式-->
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="https://picsum.photos/id/1038/100/100" >
+                            roxy
+                        </div>
+                        <!--dropdown icon:下拉的图标-->
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--m-right-top:自定义绝对位置布局、m-mobile-show:自定义按钮显示、menu toggle:没有任何显示上的意义,只是为了用jQuery获取这个元素(在最底部script)-->
+        <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--二级导航-->
+    <!--pointing:有一个小的角-->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" th:href="@{/admin/tags/input}" class="active item">发布</a>
+                <a href="#" th:href="@{/admin/tags}" class="teal  item">列表</a>
+            </div>
+        </div>
+    </div>
+    <!--中间内容-->
+    <div  class="m-container-small m-padded-tb-big">
+        <div class="ui container">
+            <form action="#" method="post" th:object="${tag}" th:action="*{id==null} ? @{/admin/tags/add} : @{/admin/tags/update}" class="ui form">
+                <input type="hidden" name="id" th:value="*{id}">
+                <div class=" field">
+                    <div class="ui left labeled input">
+                        <label class="ui teal basic label">名称</label>
+                        <input type="text" name="name" th:value="*{name}" placeholder="标签名称" >
+                    </div>
+                </div>
+
+                <div class="ui error message"></div>
+                <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>
+                <div class="ui right aligned container">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+                    <button class="ui teal submit button">提交</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!--通过CDN引入Semantic-UI(也可通过本地下载引入)-->
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+    <script>
+
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+            $('.remove.icon').toggleClass('m-hide');
+            $('.sidebar.icon').toggleClass('m-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+
+        $('.ui.form').form({
+            fields : {
+                title : {
+                    identifier: 'name',
+                    rules: [{
+                        type : 'empty',
+                        prompt: '请输入标签名称'
+                    }]
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
