@@ -335,3 +335,919 @@
 2022-07-20 20:49:18.494  INFO 22464 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2022-07-20 20:49:18.984  INFO 22464 --- [main] com.roxy.blog.QiNiuTest                  : Started QiNiuTest in 5.219 seconds (JVM running for 6.106)
 2022-07-20 20:49:19.315  INFO 22464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:26:31.742  INFO 27588 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 27588 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 21:26:31.745 DEBUG 27588 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 21:26:31.745  INFO 27588 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 21:26:31.793  INFO 27588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 21:26:31.793  INFO 27588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 21:26:33.331  INFO 27588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 21:26:33.340  INFO 27588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 21:26:33.340  INFO 27588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 21:26:33.461  INFO 27588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 21:26:33.461  INFO 27588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
+2022-07-20 21:26:35.479  INFO 27588 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:26:35.535  INFO 27588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 21:26:35.566  INFO 27588 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 21:26:35.900  INFO 27588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 21:26:35.953  INFO 27588 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.721 seconds (JVM running for 6.277)
+2022-07-20 21:26:52.961  INFO 27588 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 21:26:52.961  INFO 27588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 21:26:52.971  INFO 27588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-07-20 21:26:52.998  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:26:52.998  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:26:52.999  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:26:52.999  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:26:53.001  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:26:53.001  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:26:53 CST 2022
+2022-07-20 21:26:53.009  INFO 27588 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 21:26:53.213  INFO 27588 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 21:26:53.288 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:26:53.306 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:26:53.330 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:26:53.335 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:26:53.336 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:26:53.341 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:26:53.346 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:26:53.347 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:26:53.350 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:26:53.357 DEBUG 27588 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:26:53.357 DEBUG 27588 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:26:53.364 DEBUG 27588 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:26:53.366 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:26:53.366 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:26:53.370 DEBUG 27588 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:26:53.440  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:26:53.440  INFO 27588 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 438
+2022-07-20 21:53:59.626  INFO 27588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:53:59.628  INFO 27588 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 21:53:59.640  INFO 27588 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 21:54:04.572  INFO 7392 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 7392 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 21:54:04.575 DEBUG 7392 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 21:54:04.576  INFO 7392 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 21:54:04.617  INFO 7392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 21:54:04.617  INFO 7392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 21:54:06.021  INFO 7392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 21:54:06.029  INFO 7392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 21:54:06.029  INFO 7392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 21:54:06.154  INFO 7392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 21:54:06.155  INFO 7392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1538 ms
+2022-07-20 21:54:08.010  INFO 7392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:54:08.059  INFO 7392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 21:54:08.088  INFO 7392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 21:54:08.403  INFO 7392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 21:54:08.452  INFO 7392 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.457 seconds (JVM running for 6.067)
+2022-07-20 21:54:21.040  INFO 7392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 21:54:21.041  INFO 7392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 21:54:21.055  INFO 7392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2022-07-20 21:54:21.199  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:54:21.199  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:54:21.199  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:54:21.200  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:54:21.201  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:54:21.201  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:54:21 CST 2022
+2022-07-20 21:54:21.208  INFO 7392 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 21:54:21.396  INFO 7392 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 21:54:21.458 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:54:21.476 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:54:21.499 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:54:21.502 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:54:21.502 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:54:21.507 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:54:21.512 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:54:21.513 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:54:21.518 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:54:21.523 DEBUG 7392 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:54:21.524 DEBUG 7392 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:54:21.531 DEBUG 7392 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:54:21.533 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:54:21.533 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:54:21.535 DEBUG 7392 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:54:21.620  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:54:21.621  INFO 7392 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 419
+2022-07-20 21:57:57.999  INFO 7392 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:57:58.002  INFO 7392 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 21:57:58.012  INFO 7392 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 21:58:04.890  INFO 21812 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 21812 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 21:58:04.893 DEBUG 21812 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 21:58:04.893  INFO 21812 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 21:58:04.952  INFO 21812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 21:58:04.952  INFO 21812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 21:58:06.316  INFO 21812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 21:58:06.323  INFO 21812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 21:58:06.324  INFO 21812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 21:58:06.434  INFO 21812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 21:58:06.434  INFO 21812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1482 ms
+2022-07-20 21:58:08.278  INFO 21812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:58:08.371  INFO 21812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 21:58:08.405  INFO 21812 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 21:58:08.876  INFO 21812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 21:58:08.942  INFO 21812 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.782 seconds (JVM running for 7.767)
+2022-07-20 21:58:09.901  INFO 21812 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 21:58:09.901  INFO 21812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 21:58:09.909  INFO 21812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-20 21:58:09.935  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:58:09.935  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:58:09.935  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:58:09.935  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:58:09.936  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:58:09.937  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:58:09 CST 2022
+2022-07-20 21:58:09.944  INFO 21812 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 21:58:10.152  INFO 21812 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 21:58:10.232 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:58:10.259 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:58:10.278 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:58:10.284 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:58:10.285 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:58:10.291 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:58:10.298 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:58:10.299 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:58:10.304 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:58:10.308 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:58:10.309 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:58:10.314 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:58:10.316 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:58:10.317 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:58:10.320 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:58:10.402  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:58:10.403  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 466
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:58:12.981  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:58:12 CST 2022
+2022-07-20 21:58:12.984 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:58:12.985 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:58:12.986 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:58:12.986 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:58:12.987 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:58:12.989 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:58:12.990 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:58:12.990 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:58:12.992 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:58:12.993 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:58:12.993 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:58:12.996 DEBUG 21812 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:58:12.997 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:58:12.997 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:58:12.999 DEBUG 21812 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:58:13.001  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:58:13.001  INFO 21812 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 20
+2022-07-20 21:59:30.800  INFO 21812 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:59:30.804  INFO 21812 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 21:59:30.818  INFO 21812 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 21:59:36.631  INFO 29240 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 29240 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 21:59:36.634 DEBUG 29240 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 21:59:36.635  INFO 29240 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 21:59:36.694  INFO 29240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 21:59:36.694  INFO 29240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 21:59:38.034  INFO 29240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 21:59:38.040  INFO 29240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 21:59:38.040  INFO 29240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 21:59:38.155  INFO 29240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 21:59:38.155  INFO 29240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1461 ms
+2022-07-20 21:59:40.024  INFO 29240 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 21:59:40.076  INFO 29240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 21:59:40.105  INFO 29240 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 21:59:40.414  INFO 29240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 21:59:40.464  INFO 29240 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.358 seconds (JVM running for 7.075)
+2022-07-20 21:59:48.487  INFO 29240 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 21:59:48.487  INFO 29240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 21:59:48.494  INFO 29240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-07-20 21:59:48.522  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:59:48.523  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:59:48.523  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:59:48.523  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:59:48.524  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:59:48.524  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:59:48 CST 2022
+2022-07-20 21:59:48.543  INFO 29240 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 21:59:48.791  INFO 29240 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 21:59:48.862 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:59:48.880 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:59:48.897 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:59:48.903 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:59:48.904 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:59:48.909 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:59:48.917 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:59:48.918 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:59:48.923 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:59:48.928 DEBUG 29240 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:59:48.928 DEBUG 29240 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:59:48.939 DEBUG 29240 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:59:48.942 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:59:48.942 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:59:48.945 DEBUG 29240 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:59:49.013  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:59:49.013  INFO 29240 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 488
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 21:59:56.394  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 21:59:56 CST 2022
+2022-07-20 21:59:56.399 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 21:59:56.399 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 21:59:56.407 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 21:59:56.408 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 21:59:56.409 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 21:59:56.410 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 21:59:56.411 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 21:59:56.412 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 21:59:56.413 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 21:59:56.414 DEBUG 29240 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 21:59:56.414 DEBUG 29240 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 21:59:56.419 DEBUG 29240 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 21:59:56.422 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 21:59:56.423 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 21:59:56.424 DEBUG 29240 --- [http-nio-8080-exec-2] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 21:59:56.426  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 21:59:56.427  INFO 29240 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### execution time : 33
+2022-07-20 22:06:05.667  INFO 29240 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:06:05.671  INFO 29240 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:06:05.681  INFO 29240 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:06:11.486  INFO 14148 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 14148 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:06:11.490 DEBUG 14148 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:06:11.490  INFO 14148 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:06:11.545  INFO 14148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:06:11.546  INFO 14148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:06:13.167  INFO 14148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:06:13.175  INFO 14148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:06:13.175  INFO 14148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:06:13.293  INFO 14148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:06:13.293  INFO 14148 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1747 ms
+2022-07-20 22:06:15.183  INFO 14148 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:06:15.235  INFO 14148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:06:15.265  INFO 14148 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:06:15.601  INFO 14148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:06:15.656  INFO 14148 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 5.199 seconds (JVM running for 7.517)
+2022-07-20 22:06:19.362  INFO 14148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:06:19.362  INFO 14148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:06:19.370  INFO 14148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-20 22:06:19.397  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:06:19.397  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:06:19.398  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:06:19.398  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:06:19.399  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:06:19.399  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:06:19 CST 2022
+2022-07-20 22:06:19.411  INFO 14148 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:06:19.667  INFO 14148 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:06:19.755 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:06:19.772 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:06:19.793 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:06:19.796 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:06:19.797 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:06:19.801 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:06:19.808 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:06:19.808 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:06:19.812 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:06:19.816 DEBUG 14148 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:06:19.816 DEBUG 14148 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:06:19.822 DEBUG 14148 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:06:19.824 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:06:19.825 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:06:19.826 DEBUG 14148 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:06:19.892  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:06:19.892  INFO 14148 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 492
+2022-07-20 22:09:19.444  INFO 14148 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:09:19.446  INFO 14148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:09:19.457  INFO 14148 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:09:25.853  INFO 7480 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 7480 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:09:25.856 DEBUG 7480 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:09:25.857  INFO 7480 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:09:25.918  INFO 7480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:09:25.918  INFO 7480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:09:27.657  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:09:27.669  INFO 7480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:09:27.669  INFO 7480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:09:27.808  INFO 7480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:09:27.808  INFO 7480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1889 ms
+2022-07-20 22:09:29.947  INFO 7480 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:09:30.008  INFO 7480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:09:30.057  INFO 7480 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:09:30.582  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:09:30.654  INFO 7480 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 5.582 seconds (JVM running for 8.638)
+2022-07-20 22:09:33.775  INFO 7480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:09:33.776  INFO 7480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:09:33.784  INFO 7480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-20 22:09:33.809  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:09:33.809  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:09:33.809  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:09:33.809  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:09:33.810  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:09:33.810  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:09:33 CST 2022
+2022-07-20 22:09:33.818  INFO 7480 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:09:34.012  INFO 7480 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:09:34.092 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:09:34.110 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:09:34.128 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:09:34.131 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:09:34.132 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:09:34.135 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:09:34.143 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:09:34.143 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:09:34.147 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:09:34.152 DEBUG 7480 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:09:34.152 DEBUG 7480 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:09:34.160 DEBUG 7480 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:09:34.162 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:09:34.162 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:09:34.164 DEBUG 7480 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:09:34.232  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:09:34.232  INFO 7480 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 421
+2022-07-20 22:10:45.584  INFO 7480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:10:45.586  INFO 7480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:10:45.596  INFO 7480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:10:51.238  INFO 2204 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 2204 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:10:51.241 DEBUG 2204 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:10:51.241  INFO 2204 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:10:51.294  INFO 2204 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:10:51.295  INFO 2204 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:10:52.836  INFO 2204 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:10:52.844  INFO 2204 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:10:52.845  INFO 2204 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:10:52.972  INFO 2204 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:10:52.972  INFO 2204 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1677 ms
+2022-07-20 22:10:54.901  INFO 2204 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:10:54.952  INFO 2204 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:10:54.983  INFO 2204 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:10:55.308  INFO 2204 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:10:55.364  INFO 2204 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.654 seconds (JVM running for 6.542)
+2022-07-20 22:10:58.800  INFO 2204 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:10:58.801  INFO 2204 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:10:58.811  INFO 2204 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-07-20 22:10:58.839  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:10:58.839  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:10:58.839  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:10:58.839  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:10:58.841  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:10:58.841  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:10:58 CST 2022
+2022-07-20 22:10:58.853  INFO 2204 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:10:59.081  INFO 2204 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:10:59.161 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:10:59.181 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:10:59.202 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:10:59.208 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:10:59.208 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:10:59.217 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:10:59.228 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:10:59.228 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:10:59.233 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:10:59.238 DEBUG 2204 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:10:59.238 DEBUG 2204 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:10:59.244 DEBUG 2204 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:10:59.247 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:10:59.247 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:10:59.250 DEBUG 2204 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:10:59.331  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:10:59.331  INFO 2204 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 489
+2022-07-20 22:21:18.599  INFO 2204 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:21:18.601  INFO 2204 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:21:18.613  INFO 2204 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:21:23.798  INFO 14860 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 14860 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:21:23.802 DEBUG 14860 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:21:23.802  INFO 14860 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:21:23.854  INFO 14860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:21:23.855  INFO 14860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:21:25.309  INFO 14860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:21:25.317  INFO 14860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:21:25.317  INFO 14860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:21:25.424  INFO 14860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:21:25.425  INFO 14860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1570 ms
+2022-07-20 22:21:27.224  INFO 14860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:21:27.274  INFO 14860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:21:27.304  INFO 14860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:21:27.613  INFO 14860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:21:27.666  INFO 14860 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.345 seconds (JVM running for 6.257)
+2022-07-20 22:21:39.937  INFO 14860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:21:39.938  INFO 14860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:21:39.950  INFO 14860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2022-07-20 22:21:39.979  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:21:39.979  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:39.979  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:39.980  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:21:39.981  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:21:39.982  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:39 CST 2022
+2022-07-20 22:21:39.995  INFO 14860 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:21:40.246  INFO 14860 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:21:40.336 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:21:40.355 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:21:40.379 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:21:40.386 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:21:40.387 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:21:40.392 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:21:40.402 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:21:40.402 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:21:40.405 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:21:40.408 DEBUG 14860 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:21:40.409 DEBUG 14860 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:21:40.418 DEBUG 14860 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:21:40.420 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:21:40.421 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:21:40.425 DEBUG 14860 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:21:40.511  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:21:40.512  INFO 14860 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 529
+2022-07-20 22:21:48.940  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/types/-1
+2022-07-20 22:21:48.941  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:48.941  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:48.941  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [1, -1, {}]
+2022-07-20 22:21:48.941  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.TypeShowController.types
+2022-07-20 22:21:48.941  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:48 CST 2022
+2022-07-20 22:21:48.946 DEBUG 14860 --- [http-nio-8080-exec-6] com.roxy.blog.dao.TypeMapper.getAllType  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1
+2022-07-20 22:21:48.947 DEBUG 14860 --- [http-nio-8080-exec-6] com.roxy.blog.dao.TypeMapper.getAllType  : ==> Parameters: 
+2022-07-20 22:21:48.952 DEBUG 14860 --- [http-nio-8080-exec-6] com.roxy.blog.dao.TypeMapper.getAllType  : <==      Total: 9
+2022-07-20 22:21:48.953 DEBUG 14860 --- [http-nio-8080-exec-6] c.roxy.blog.dao.BlogMapper.getByTypeId   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 and b.type_id = ? order by b.update_time desc
+2022-07-20 22:21:48.954 DEBUG 14860 --- [http-nio-8080-exec-6] c.roxy.blog.dao.BlogMapper.getByTypeId   : ==> Parameters: 1(Long)
+2022-07-20 22:21:48.956 DEBUG 14860 --- [http-nio-8080-exec-6] c.roxy.blog.dao.BlogMapper.getByTypeId   : <==      Total: 6
+2022-07-20 22:21:48.958  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### return message : "types"
+2022-07-20 22:21:48.959  INFO 14860 --- [http-nio-8080-exec-6] com.roxy.blog.aspect.LogAspect           : ######### execution time : 18
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/tags/-1
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [1, -1, {}]
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.TagShowController.tag
+2022-07-20 22:21:50.418  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:50 CST 2022
+2022-07-20 22:21:50.421 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:21:50.421 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:21:50.424 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:21:50.426 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.BlogMapper.getByTagId  : ==>  Preparing: select b.id, b.title, b.first_picture as firstPicture, b.views, b.update_time as updateTime, b.description, t.name as typeName, u.nickname, u.avatar from t_blog b, t_type t, t_user u, t_blog_tags tb, t_tag t1 where b.type_id = t.id and b.published = 1 and u.id = b.user_id and tb.blog_id = b.id and tb.tag_id = t1.id and t1.id = ? order by b.update_time desc
+2022-07-20 22:21:50.426 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.BlogMapper.getByTagId  : ==> Parameters: 16(Long)
+2022-07-20 22:21:50.434 DEBUG 14860 --- [http-nio-8080-exec-2] com.roxy.blog.dao.BlogMapper.getByTagId  : <==      Total: 1
+2022-07-20 22:21:50.435  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### return message : "tags"
+2022-07-20 22:21:50.435  INFO 14860 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### execution time : 17
+2022-07-20 22:21:52.101  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:21:52.102  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:52.102  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:52.102  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:21:52.102  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:21:52.102  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:52 CST 2022
+2022-07-20 22:21:52.105 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:21:52.106 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:21:52.106 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:21:52.107 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:21:52.107 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:21:52.111 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:21:52.113 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:21:52.114 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:21:52.116 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:21:52.118 DEBUG 14860 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:21:52.118 DEBUG 14860 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:21:52.120 DEBUG 14860 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:21:52.129 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:21:52.129 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:21:52.132 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:21:52.133  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:21:52.133  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### execution time : 31
+2022-07-20 22:21:56.259  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin
+2022-07-20 22:21:56.259  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:56.260  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:56.260  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : []
+2022-07-20 22:21:56.260  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.loginPage
+2022-07-20 22:21:56.260  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:56 CST 2022
+2022-07-20 22:21:56.264  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/login"
+2022-07-20 22:21:56.264  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### execution time : 4
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/login
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : POST
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [roxy, 404notfound, {}, org.apache.catalina.session.StandardSessionFacade@7321e835]
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.login
+2022-07-20 22:21:57.921  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:57 CST 2022
+2022-07-20 22:21:57.925 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.blog.dao.UserMapper.getUserByName    : ==>  Preparing: select * from t_user where username = ?
+2022-07-20 22:21:57.925 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.blog.dao.UserMapper.getUserByName    : ==> Parameters: roxy(String)
+2022-07-20 22:21:57.926 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.blog.dao.UserMapper.getUserByName    : <==      Total: 1
+2022-07-20 22:21:57.929  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/index"
+2022-07-20 22:21:57.929  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### execution time : 8
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/blogs
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.BlogController.toBlog
+2022-07-20 22:21:59.220  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:21:59 CST 2022
+2022-07-20 22:21:59.223 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.d.B.getAllBlogQuery_COUNT          : ==>  Preparing: SELECT count(0) FROM t_blog b LEFT OUTER JOIN t_type t ON b.type_id = t.id
+2022-07-20 22:21:59.224 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.d.B.getAllBlogQuery_COUNT          : ==> Parameters: 
+2022-07-20 22:21:59.225 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.d.B.getAllBlogQuery_COUNT          : <==      Total: 1
+2022-07-20 22:21:59.226 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.blog.dao.BlogMapper.getAllBlogQuery  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name from t_blog b left outer join t_type t on b.type_id = t.id order by b.update_time desc LIMIT ?
+2022-07-20 22:21:59.226 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.blog.dao.BlogMapper.getAllBlogQuery  : ==> Parameters: 5(Integer)
+2022-07-20 22:21:59.228 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.blog.dao.BlogMapper.getAllBlogQuery  : <==      Total: 5
+2022-07-20 22:21:59.231 DEBUG 14860 --- [http-nio-8080-exec-4] c.roxy.blog.dao.TypeMapper.getAdminType  : ==>  Preparing: select * from t_type
+2022-07-20 22:21:59.231 DEBUG 14860 --- [http-nio-8080-exec-4] c.roxy.blog.dao.TypeMapper.getAdminType  : ==> Parameters: 
+2022-07-20 22:21:59.233 DEBUG 14860 --- [http-nio-8080-exec-4] c.roxy.blog.dao.TypeMapper.getAdminType  : <==      Total: 7
+2022-07-20 22:21:59.235 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : ==>  Preparing: select * from t_tag
+2022-07-20 22:21:59.235 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : ==> Parameters: 
+2022-07-20 22:21:59.236 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : <==      Total: 33
+2022-07-20 22:21:59.239  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/blogs"
+2022-07-20 22:21:59.239  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### execution time : 19
+2022-07-20 22:22:00.033  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/types
+2022-07-20 22:22:00.033  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:00.034  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:00.034  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [1, {}]
+2022-07-20 22:22:00.034  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.TypeController.types
+2022-07-20 22:22:00.034  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:00 CST 2022
+2022-07-20 22:22:00.039 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.getAdminType_COUNT  : ==>  Preparing: SELECT count(0) FROM t_type
+2022-07-20 22:22:00.039 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.getAdminType_COUNT  : ==> Parameters: 
+2022-07-20 22:22:00.043 DEBUG 14860 --- [http-nio-8080-exec-8] c.r.b.dao.TypeMapper.getAdminType_COUNT  : <==      Total: 1
+2022-07-20 22:22:00.044 DEBUG 14860 --- [http-nio-8080-exec-8] c.roxy.blog.dao.TypeMapper.getAdminType  : ==>  Preparing: select * from t_type LIMIT ?
+2022-07-20 22:22:00.045 DEBUG 14860 --- [http-nio-8080-exec-8] c.roxy.blog.dao.TypeMapper.getAdminType  : ==> Parameters: 8(Integer)
+2022-07-20 22:22:00.047 DEBUG 14860 --- [http-nio-8080-exec-8] c.roxy.blog.dao.TypeMapper.getAdminType  : <==      Total: 7
+2022-07-20 22:22:00.048  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/types"
+2022-07-20 22:22:00.048  INFO 14860 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### execution time : 14
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/tags
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.TagController.toTagPage
+2022-07-20 22:22:00.811  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:00 CST 2022
+2022-07-20 22:22:00.815 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.dao.TagMapper.getAdminTag_COUNT    : ==>  Preparing: SELECT count(0) FROM t_tag
+2022-07-20 22:22:00.815 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.dao.TagMapper.getAdminTag_COUNT    : ==> Parameters: 
+2022-07-20 22:22:00.817 DEBUG 14860 --- [http-nio-8080-exec-4] c.r.b.dao.TagMapper.getAdminTag_COUNT    : <==      Total: 1
+2022-07-20 22:22:00.817 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : ==>  Preparing: select * from t_tag LIMIT ?
+2022-07-20 22:22:00.817 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : ==> Parameters: 8(Integer)
+2022-07-20 22:22:00.818 DEBUG 14860 --- [http-nio-8080-exec-4] com.roxy.blog.dao.TagMapper.getAdminTag  : <==      Total: 8
+2022-07-20 22:22:00.819  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/tags"
+2022-07-20 22:22:00.819  INFO 14860 --- [http-nio-8080-exec-4] com.roxy.blog.aspect.LogAspect           : ######### execution time : 8
+2022-07-20 22:22:04.488  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/logout
+2022-07-20 22:22:04.488  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [org.apache.catalina.session.StandardSessionFacade@7321e835]
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.logOut
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:04 CST 2022
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### return message : "redirect:/admin"
+2022-07-20 22:22:04.489  INFO 14860 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### execution time : 0
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : []
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.loginPage
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:04 CST 2022
+2022-07-20 22:22:04.508  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/login"
+2022-07-20 22:22:04.509  INFO 14860 --- [http-nio-8080-exec-3] com.roxy.blog.aspect.LogAspect           : ######### execution time : 1
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/login
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : POST
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [roxy, 404notfound, {}, org.apache.catalina.session.StandardSessionFacade@7321e835]
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.login
+2022-07-20 22:22:05.915  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:05 CST 2022
+2022-07-20 22:22:05.917 DEBUG 14860 --- [http-nio-8080-exec-10] c.r.blog.dao.UserMapper.getUserByName    : ==>  Preparing: select * from t_user where username = ?
+2022-07-20 22:22:05.917 DEBUG 14860 --- [http-nio-8080-exec-10] c.r.blog.dao.UserMapper.getUserByName    : ==> Parameters: roxy(String)
+2022-07-20 22:22:05.918 DEBUG 14860 --- [http-nio-8080-exec-10] c.r.blog.dao.UserMapper.getUserByName    : <==      Total: 1
+2022-07-20 22:22:05.919  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/index"
+2022-07-20 22:22:05.919  INFO 14860 --- [http-nio-8080-exec-10] com.roxy.blog.aspect.LogAspect           : ######### execution time : 4
+2022-07-20 22:22:07.194  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/blogs
+2022-07-20 22:22:07.195  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:07.195  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:07.195  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:22:07.195  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.BlogController.toBlog
+2022-07-20 22:22:07.195  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:07 CST 2022
+2022-07-20 22:22:07.198 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.b.d.B.getAllBlogQuery_COUNT          : ==>  Preparing: SELECT count(0) FROM t_blog b LEFT OUTER JOIN t_type t ON b.type_id = t.id
+2022-07-20 22:22:07.198 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.b.d.B.getAllBlogQuery_COUNT          : ==> Parameters: 
+2022-07-20 22:22:07.199 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.b.d.B.getAllBlogQuery_COUNT          : <==      Total: 1
+2022-07-20 22:22:07.200 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.blog.dao.BlogMapper.getAllBlogQuery  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name from t_blog b left outer join t_type t on b.type_id = t.id order by b.update_time desc LIMIT ?
+2022-07-20 22:22:07.200 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.blog.dao.BlogMapper.getAllBlogQuery  : ==> Parameters: 5(Integer)
+2022-07-20 22:22:07.201 DEBUG 14860 --- [http-nio-8080-exec-9] c.r.blog.dao.BlogMapper.getAllBlogQuery  : <==      Total: 5
+2022-07-20 22:22:07.202 DEBUG 14860 --- [http-nio-8080-exec-9] c.roxy.blog.dao.TypeMapper.getAdminType  : ==>  Preparing: select * from t_type
+2022-07-20 22:22:07.202 DEBUG 14860 --- [http-nio-8080-exec-9] c.roxy.blog.dao.TypeMapper.getAdminType  : ==> Parameters: 
+2022-07-20 22:22:07.203 DEBUG 14860 --- [http-nio-8080-exec-9] c.roxy.blog.dao.TypeMapper.getAdminType  : <==      Total: 7
+2022-07-20 22:22:07.204 DEBUG 14860 --- [http-nio-8080-exec-9] com.roxy.blog.dao.TagMapper.getAdminTag  : ==>  Preparing: select * from t_tag
+2022-07-20 22:22:07.204 DEBUG 14860 --- [http-nio-8080-exec-9] com.roxy.blog.dao.TagMapper.getAdminTag  : ==> Parameters: 
+2022-07-20 22:22:07.205 DEBUG 14860 --- [http-nio-8080-exec-9] com.roxy.blog.dao.TagMapper.getAdminTag  : <==      Total: 33
+2022-07-20 22:22:07.206  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/blogs"
+2022-07-20 22:22:07.206  INFO 14860 --- [http-nio-8080-exec-9] com.roxy.blog.aspect.LogAspect           : ######### execution time : 11
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/blogs/input
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}]
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.BlogController.toBlogAdd
+2022-07-20 22:22:08.441  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:22:08 CST 2022
+2022-07-20 22:22:08.442 DEBUG 14860 --- [http-nio-8080-exec-5] c.roxy.blog.dao.TypeMapper.getAdminType  : ==>  Preparing: select * from t_type
+2022-07-20 22:22:08.443 DEBUG 14860 --- [http-nio-8080-exec-5] c.roxy.blog.dao.TypeMapper.getAdminType  : ==> Parameters: 
+2022-07-20 22:22:08.444 DEBUG 14860 --- [http-nio-8080-exec-5] c.roxy.blog.dao.TypeMapper.getAdminType  : <==      Total: 7
+2022-07-20 22:22:08.448 DEBUG 14860 --- [http-nio-8080-exec-5] com.roxy.blog.dao.TagMapper.getAdminTag  : ==>  Preparing: select * from t_tag
+2022-07-20 22:22:08.448 DEBUG 14860 --- [http-nio-8080-exec-5] com.roxy.blog.dao.TagMapper.getAdminTag  : ==> Parameters: 
+2022-07-20 22:22:08.450 DEBUG 14860 --- [http-nio-8080-exec-5] com.roxy.blog.dao.TagMapper.getAdminTag  : <==      Total: 33
+2022-07-20 22:22:08.452  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/blogs-input"
+2022-07-20 22:22:08.453  INFO 14860 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### execution time : 12
+2022-07-20 22:26:38.522  INFO 14860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:26:38.525  INFO 14860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:26:38.536  INFO 14860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:26:44.274  INFO 2092 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 2092 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:26:44.277 DEBUG 2092 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:26:44.278  INFO 2092 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:26:44.333  INFO 2092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:26:44.334  INFO 2092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:26:45.800  INFO 2092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:26:45.807  INFO 2092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:26:45.807  INFO 2092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:26:45.921  INFO 2092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:26:45.921  INFO 2092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1587 ms
+2022-07-20 22:26:47.710  INFO 2092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:26:47.770  INFO 2092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:26:47.796  INFO 2092 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:26:48.116  INFO 2092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:26:48.169  INFO 2092 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.439 seconds (JVM running for 6.867)
+2022-07-20 22:26:57.851  INFO 2092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:26:57.852  INFO 2092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:26:57.862  INFO 2092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-07-20 22:26:57.899  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:26:57.900  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:26:57.901  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:26:57.901  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:26:57.903  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:26:57.903  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:26:57 CST 2022
+2022-07-20 22:26:57.913  INFO 2092 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:26:58.089  INFO 2092 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:26:58.156 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:26:58.174 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:26:58.193 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:26:58.200 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:26:58.201 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:26:58.207 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:26:58.213 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:26:58.213 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:26:58.217 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:26:58.221 DEBUG 2092 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:26:58.221 DEBUG 2092 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:26:58.226 DEBUG 2092 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:26:58.227 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:26:58.227 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:26:58.229 DEBUG 2092 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:26:58.306  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:26:58.306  INFO 2092 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 402
+2022-07-20 22:28:38.729  INFO 2092 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:28:38.731  INFO 2092 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:28:38.745  INFO 2092 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:28:49.235  INFO 24380 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 24380 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:28:49.238 DEBUG 24380 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:28:49.238  INFO 24380 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:28:49.285  INFO 24380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:28:49.285  INFO 24380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:28:51.040  INFO 24380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:28:51.054  INFO 24380 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:28:51.054  INFO 24380 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:28:51.204  INFO 24380 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:28:51.204  INFO 24380 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1919 ms
+2022-07-20 22:28:53.176  INFO 24380 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:28:53.233  INFO 24380 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:28:53.262  INFO 24380 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:28:53.583  INFO 24380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:28:53.636  INFO 24380 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.977 seconds (JVM running for 6.667)
+2022-07-20 22:29:00.417  INFO 24380 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:29:00.418  INFO 24380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:29:00.426  INFO 24380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-20 22:29:00.453  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:29:00.454  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:29:00.454  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:29:00.454  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:29:00.455  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:29:00.455  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:29:00 CST 2022
+2022-07-20 22:29:00.465  INFO 24380 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:29:00.678  INFO 24380 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:29:00.769 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:29:00.793 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:29:00.816 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:29:00.822 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:29:00.823 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:29:00.829 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:29:00.838 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:29:00.838 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:29:00.842 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:29:00.846 DEBUG 24380 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:29:00.847 DEBUG 24380 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:29:00.853 DEBUG 24380 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:29:00.856 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:29:00.856 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:29:00.858 DEBUG 24380 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:29:00.924  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:29:00.924  INFO 24380 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 468
+2022-07-20 22:30:39.059  INFO 24380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:30:39.061  INFO 24380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:30:39.072  INFO 24380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:30:47.053  INFO 21232 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 21232 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:30:47.055 DEBUG 21232 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:30:47.055  INFO 21232 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:30:47.091  INFO 21232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:30:47.091  INFO 21232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:30:48.519  INFO 21232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:30:48.525  INFO 21232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:30:48.526  INFO 21232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:30:48.637  INFO 21232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:30:48.638  INFO 21232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1547 ms
+2022-07-20 22:30:50.471  INFO 21232 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:30:50.519  INFO 21232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:30:50.555  INFO 21232 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:30:50.864  INFO 21232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:30:50.916  INFO 21232 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.311 seconds (JVM running for 5.802)
+2022-07-20 22:31:10.413  INFO 21232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:31:10.413  INFO 21232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:31:10.425  INFO 21232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2022-07-20 22:31:10.456  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:31:10.457  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:31:10.457  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:31:10.457  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:31:10.459  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:31:10.459  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:31:10 CST 2022
+2022-07-20 22:31:10.473  INFO 21232 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:31:10.685  INFO 21232 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:31:10.771 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:31:10.790 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:31:10.808 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:31:10.811 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:31:10.812 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:31:10.818 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:31:10.823 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:31:10.824 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:31:10.826 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:31:10.830 DEBUG 21232 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:31:10.830 DEBUG 21232 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:31:10.837 DEBUG 21232 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:31:10.839 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:31:10.840 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:31:10.842 DEBUG 21232 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:31:10.912  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:31:10.912  INFO 21232 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 451
+2022-07-20 22:33:50.627  INFO 21232 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:33:50.631  INFO 21232 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:33:50.644  INFO 21232 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:33:57.978  INFO 28416 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 28416 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:33:57.981 DEBUG 28416 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:33:57.981  INFO 28416 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:33:58.030  INFO 28416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:33:58.031  INFO 28416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:33:59.546  INFO 28416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:33:59.555  INFO 28416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:33:59.555  INFO 28416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:33:59.672  INFO 28416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:33:59.672  INFO 28416 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1641 ms
+2022-07-20 22:34:01.567  INFO 28416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:34:01.615  INFO 28416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:34:01.645  INFO 28416 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:34:01.977  INFO 28416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:34:02.032  INFO 28416 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.532 seconds (JVM running for 7.385)
+2022-07-20 22:34:07.465  INFO 28416 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:34:07.465  INFO 28416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:34:07.474  INFO 28416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-07-20 22:34:07.497  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:34:07.497  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:34:07.498  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:34:07.498  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:34:07.499  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:34:07.499  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:34:07 CST 2022
+2022-07-20 22:34:07.510  INFO 28416 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:34:07.682  INFO 28416 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:34:07.762 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:34:07.781 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:34:07.803 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:34:07.807 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:34:07.808 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:34:07.814 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:34:07.821 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:34:07.821 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:34:07.825 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:34:07.829 DEBUG 28416 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:34:07.829 DEBUG 28416 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:34:07.834 DEBUG 28416 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:34:07.837 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:34:07.837 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:34:07.840 DEBUG 28416 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:34:07.926  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:34:07.927  INFO 28416 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 426
+2022-07-20 22:34:28.747  INFO 28416 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:34:28.749  INFO 28416 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:34:28.761  INFO 28416 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:34:35.236  INFO 29272 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 29272 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:34:35.239 DEBUG 29272 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:34:35.240  INFO 29272 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:34:35.313  INFO 29272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:34:35.314  INFO 29272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:34:37.135  INFO 29272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:34:37.148  INFO 29272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:34:37.148  INFO 29272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:34:37.410  INFO 29272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:34:37.410  INFO 29272 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2096 ms
+2022-07-20 22:34:40.227  INFO 29272 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:34:40.282  INFO 29272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:34:40.313  INFO 29272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:34:40.696  INFO 29272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:34:40.758  INFO 29272 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 6.051 seconds (JVM running for 8.881)
+2022-07-20 22:34:44.050  INFO 29272 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:34:44.050  INFO 29272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:34:44.059  INFO 29272 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-07-20 22:34:44.087  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:34:44.088  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:34:44.088  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:34:44.088  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:34:44.089  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:34:44.090  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:34:44 CST 2022
+2022-07-20 22:34:44.102  INFO 29272 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:34:44.333  INFO 29272 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:34:44.408 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:34:44.426 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:34:44.444 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:34:44.450 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:34:44.451 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:34:44.460 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:34:44.471 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:34:44.471 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:34:44.477 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:34:44.483 DEBUG 29272 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:34:44.484 DEBUG 29272 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:34:44.493 DEBUG 29272 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:34:44.497 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:34:44.497 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:34:44.501 DEBUG 29272 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:34:44.635  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:34:44.635  INFO 29272 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 543
+2022-07-20 22:35:31.841  INFO 29272 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:35:31.842  INFO 29272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:35:31.853  INFO 29272 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-20 22:35:38.484  INFO 33320 --- [restartedMain] com.roxy.blog.BlogApplication            : Starting BlogApplication on LAPTOP-HH7CLTTJ with PID 33320 (H:\study\roxy_blog\target\classes started by 86186 in H:\study\roxy_blog)
+2022-07-20 22:35:38.495 DEBUG 33320 --- [restartedMain] com.roxy.blog.BlogApplication            : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2022-07-20 22:35:38.495  INFO 33320 --- [restartedMain] com.roxy.blog.BlogApplication            : The following profiles are active: dev
+2022-07-20 22:35:38.555  INFO 33320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-20 22:35:38.555  INFO 33320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-20 22:35:39.950  INFO 33320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-07-20 22:35:39.958  INFO 33320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-20 22:35:39.959  INFO 33320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2022-07-20 22:35:40.077  INFO 33320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-20 22:35:40.077  INFO 33320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1522 ms
+2022-07-20 22:35:41.832  INFO 33320 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:35:41.876  INFO 33320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-20 22:35:41.907  INFO 33320 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-07-20 22:35:42.222  INFO 33320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-20 22:35:42.272  INFO 33320 --- [restartedMain] com.roxy.blog.BlogApplication            : Started BlogApplication in 4.287 seconds (JVM running for 5.762)
+2022-07-20 22:35:47.054  INFO 33320 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-20 22:35:47.055  INFO 33320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-20 22:35:47.063  INFO 33320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-20 22:35:47.088  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/
+2022-07-20 22:35:47.088  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:35:47.089  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:35:47.089  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:35:47.090  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.IndexController.toIndex
+2022-07-20 22:35:47.091  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:35:47 CST 2022
+2022-07-20 22:35:47.102  INFO 33320 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-20 22:35:47.375  INFO 33320 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-20 22:35:47.452 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id AND b.published = 1
+2022-07-20 22:35:47.473 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : ==> Parameters: 
+2022-07-20 22:35:47.492 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.B.getAllFirstPageBlog_COUNT      : <==      Total: 1
+2022-07-20 22:35:47.497 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id and b.published = 1 order by b.update_time desc LIMIT ?
+2022-07-20 22:35:47.497 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : ==> Parameters: 6(Integer)
+2022-07-20 22:35:47.502 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllFirstPageBlog   : <==      Total: 6
+2022-07-20 22:35:47.507 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from t_type t,t_blog b where t.id = b.type_id and b.published = 1 order by bid desc limit ?
+2022-07-20 22:35:47.508 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : ==> Parameters: 7(Integer)
+2022-07-20 22:35:47.511 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.dao.TypeMapper.findTypeListBefore  : <==      Total: 7
+2022-07-20 22:35:47.513 DEBUG 33320 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==>  Preparing: select t.id tid,t.name,b.id bid,b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id and b.published = 1
+2022-07-20 22:35:47.514 DEBUG 33320 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : ==> Parameters: 
+2022-07-20 22:35:47.519 DEBUG 33320 --- [http-nio-8080-exec-1] com.roxy.blog.dao.TagMapper.getAllTag    : <==      Total: 23
+2022-07-20 22:35:47.522 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==>  Preparing: select id, title, recommend from t_blog;
+2022-07-20 22:35:47.522 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : ==> Parameters: 
+2022-07-20 22:35:47.525 DEBUG 33320 --- [http-nio-8080-exec-1] c.r.b.d.BlogMapper.getAllRecommendBlog   : <==      Total: 10
+2022-07-20 22:35:47.591  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### return message : "index"
+2022-07-20 22:35:47.591  INFO 33320 --- [http-nio-8080-exec-1] com.roxy.blog.aspect.LogAspect           : ######### execution time : 499
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : []
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.loginPage
+2022-07-20 22:36:03.443  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:36:03 CST 2022
+2022-07-20 22:36:03.445  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/login"
+2022-07-20 22:36:03.446  INFO 33320 --- [http-nio-8080-exec-2] com.roxy.blog.aspect.LogAspect           : ######### execution time : 3
+2022-07-20 22:36:05.858  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/login
+2022-07-20 22:36:05.858  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : POST
+2022-07-20 22:36:05.858  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:36:05.859  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [roxy, 404notfound, {}, org.apache.catalina.session.StandardSessionFacade@46195ba7]
+2022-07-20 22:36:05.859  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.LoginController.login
+2022-07-20 22:36:05.859  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:36:05 CST 2022
+2022-07-20 22:36:05.866 DEBUG 33320 --- [http-nio-8080-exec-5] c.r.blog.dao.UserMapper.getUserByName    : ==>  Preparing: select * from t_user where username = ?
+2022-07-20 22:36:05.866 DEBUG 33320 --- [http-nio-8080-exec-5] c.r.blog.dao.UserMapper.getUserByName    : ==> Parameters: roxy(String)
+2022-07-20 22:36:05.869 DEBUG 33320 --- [http-nio-8080-exec-5] c.r.blog.dao.UserMapper.getUserByName    : <==      Total: 1
+2022-07-20 22:36:05.871  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/index"
+2022-07-20 22:36:05.871  INFO 33320 --- [http-nio-8080-exec-5] com.roxy.blog.aspect.LogAspect           : ######### execution time : 12
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/types
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [1, {}]
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.TypeController.types
+2022-07-20 22:36:08.473  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:36:08 CST 2022
+2022-07-20 22:36:08.478 DEBUG 33320 --- [http-nio-8080-exec-7] c.r.b.dao.TypeMapper.getAdminType_COUNT  : ==>  Preparing: SELECT count(0) FROM t_type
+2022-07-20 22:36:08.478 DEBUG 33320 --- [http-nio-8080-exec-7] c.r.b.dao.TypeMapper.getAdminType_COUNT  : ==> Parameters: 
+2022-07-20 22:36:08.480 DEBUG 33320 --- [http-nio-8080-exec-7] c.r.b.dao.TypeMapper.getAdminType_COUNT  : <==      Total: 1
+2022-07-20 22:36:08.481 DEBUG 33320 --- [http-nio-8080-exec-7] c.roxy.blog.dao.TypeMapper.getAdminType  : ==>  Preparing: select * from t_type LIMIT ?
+2022-07-20 22:36:08.481 DEBUG 33320 --- [http-nio-8080-exec-7] c.roxy.blog.dao.TypeMapper.getAdminType  : ==> Parameters: 8(Integer)
+2022-07-20 22:36:08.482 DEBUG 33320 --- [http-nio-8080-exec-7] c.roxy.blog.dao.TypeMapper.getAdminType  : <==      Total: 7
+2022-07-20 22:36:08.483  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/types"
+2022-07-20 22:36:08.483  INFO 33320 --- [http-nio-8080-exec-7] com.roxy.blog.aspect.LogAspect           : ######### execution time : 10
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### URL : http://localhost:8080/admin/tags
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### HTTP_METHOD : GET
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### IP : 0:0:0:0:0:0:0:1
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### THE ARGS OF THE CONTROLLER : [{}, 1]
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### CLASS_METHOD : com.roxy.blog.controller.admin.TagController.toTagPage
+2022-07-20 22:36:09.832  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### request time : Wed Jul 20 22:36:09 CST 2022
+2022-07-20 22:36:09.837 DEBUG 33320 --- [http-nio-8080-exec-8] c.r.b.dao.TagMapper.getAdminTag_COUNT    : ==>  Preparing: SELECT count(0) FROM t_tag
+2022-07-20 22:36:09.837 DEBUG 33320 --- [http-nio-8080-exec-8] c.r.b.dao.TagMapper.getAdminTag_COUNT    : ==> Parameters: 
+2022-07-20 22:36:09.841 DEBUG 33320 --- [http-nio-8080-exec-8] c.r.b.dao.TagMapper.getAdminTag_COUNT    : <==      Total: 1
+2022-07-20 22:36:09.842 DEBUG 33320 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAdminTag  : ==>  Preparing: select * from t_tag LIMIT ?
+2022-07-20 22:36:09.842 DEBUG 33320 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAdminTag  : ==> Parameters: 8(Integer)
+2022-07-20 22:36:09.844 DEBUG 33320 --- [http-nio-8080-exec-8] com.roxy.blog.dao.TagMapper.getAdminTag  : <==      Total: 8
+2022-07-20 22:36:09.845  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### return message : "admin/tags"
+2022-07-20 22:36:09.845  INFO 33320 --- [http-nio-8080-exec-8] com.roxy.blog.aspect.LogAspect           : ######### execution time : 13
+2022-07-20 22:36:20.141  INFO 33320 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-20 22:36:20.151  INFO 33320 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-20 22:36:20.165  INFO 33320 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

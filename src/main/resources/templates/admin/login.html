@@ -7,8 +7,9 @@
     <title>博客管理登录</title>
     <!--通过CDN引入Semantic-UI-->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="../../static/css/me.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">-->
+    <link rel="stylesheet" href="../../static/css/semantic-ui-2.4.2-semantic.min.css" th:href="@{/css/semantic-ui-2.4.2-semantic.min.css}">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 
@@ -52,8 +53,10 @@
 
     <!--通过CDN引入Semantic-UI(也可通过本地下载引入)-->
 <!--/*/<th:block th:replace="_fragments :: script">/*/-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>-->
+    <script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../../static/js/semantic-ui-2.4.2-semantic.min.js" th:src="@{/js/semantic-ui-2.4.2-semantic.min.js}"></script>
 <!--/*/</th:block>/*/-->
 
 <script>

@@ -31,8 +31,8 @@ mybatis:
     map-underscore-to-camel-case: true
 # 七牛云配置
 qiniu:
-  accessKey: 填写七牛云ak
-  secretKey: 填写七牛云sk
+  accessKey:
+  secretKey:
   # 对象储存
   bucket: roxyblog-img # 空间名称
   zone: huabei # 存储区域

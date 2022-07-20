@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <!--通过CDN引入Semantic-UI-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.2/dist/semantic.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.2/dist/semantic.min.css">-->
+    <link rel="stylesheet" href="../static/css/semantic-ui-2.2.2-semantic.min.css" th:href="@{/css/semantic-ui-2.2.2-semantic.min.css}">
     <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
@@ -472,20 +473,7 @@
                     </div>
                     <!--*/-->
                 </div>
-
-                <!--&lt;!&ndash;二维码&ndash;&gt;
-                &lt;!&ndash;divider:分割线&ndash;&gt;
-                <h3 class="ui horizontal divider header m-margin-top-large">扫码关注我</h3>
-                &lt;!&ndash;centered:居中&ndash;&gt;
-                <div class="ui centered card" style="width: 11em">
-                    &lt;!&ndash;rounded:圆角图片&ndash;&gt;
-&lt;!&ndash;                        <img src="../static/images/WeChat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image">&ndash;&gt;
-                    <img src="../static/images/WeChat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image">
-&lt;!&ndash;                          <img src="/images/WeChat.jpg" alt="" class="ui rounded image">&ndash;&gt;
-                </div>-->
             </div>
-
-
         </div>
     </div>
 </div>
@@ -501,9 +489,12 @@
 <br>
 <br>
 <!--通过CDN引入Semantic-UI(也可通过本地下载引入)-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>-->
+<script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="../static/js/2.2.4-semantic.min.js" th:src="@{/js/2.2.4-semantic.min.js}"></script>
+<script src="../static/js/jquery.scrollTo.min.js" th:src="@{/js/jquery.scrollTo.min.js}"></script>
 
 
 <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
