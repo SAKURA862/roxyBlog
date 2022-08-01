@@ -1,17 +1,18 @@
 package com.roxy.blog.service.Impl;
 
+import com.roxy.blog.constant.ConstantPool;
 import com.roxy.blog.dao.CommentMapper;
 import com.roxy.blog.entity.Comment;
 import com.roxy.blog.exception.NotFountException;
 import com.roxy.blog.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -19,10 +20,23 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentMapper commentMapper;
 
+    @Autowired
+    @Qualifier(value = "template")
+    private RedisTemplate<String, Object> redisTemplate;
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public List<Comment> listCommentByBlogId(Long blogId) {
-        List<Comment> comments = commentMapper.findByBlogId(blogId);
+        List<?> values = redisTemplate.opsForHash().values(ConstantPool.REDIS_COMMENT_BLOG_PREFIX + blogId);
+        List<Comment> comments = new ArrayList<>();
+        if(values.size() == 0){
+            comments = commentMapper.findByBlogId(blogId);
+            Map<String, Comment> commentMap = comments.stream()
+                    .collect(Collectors.toMap(comment -> String.valueOf(comment.getId()), a -> a, (k1, k2) -> k1));
+            redisTemplate.opsForHash().putAll(ConstantPool.REDIS_COMMENT_BLOG_PREFIX + blogId, commentMap);
+        }else{
+            comments = (List<Comment>) values;
+        }
         // 转换为扁平化的树结构
         return listToTree(comments);
     }
@@ -84,7 +98,8 @@ public class CommentServiceImpl implements CommentService {
     //    删除评论
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void deleteComment(Comment comment, Long id) {
+    public void deleteComment(Comment comment, Long id, Long blogId) {
         commentMapper.deleteComment(id);
+        redisTemplate.opsForHash().delete(ConstantPool.REDIS_COMMENT_BLOG_PREFIX + blogId, id);
     }
 }

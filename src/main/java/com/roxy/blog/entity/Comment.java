@@ -1,6 +1,7 @@
 package com.roxy.blog.entity;
 
 import com.roxy.blog.dto.DetailedBlog;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,7 +13,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Comment {
+@EqualsAndHashCode
+public class Comment{
     private Long id;
     private String nickname;
     private String email;

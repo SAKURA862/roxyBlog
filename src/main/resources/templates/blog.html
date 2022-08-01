@@ -7,7 +7,7 @@
     <title>博客详情</title>
     <!--通过CDN引入Semantic-UI-->
 <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">-->
-    <link rel="stylesheet" href="../static/css/2.2.4-semantic.min.css">
+    <link rel="stylesheet" href="../static/css/2.2.4-semantic.min.css" th:href="@{/css/2.2.4-semantic.min.css}">
     <!--引入外部写好的排版样式-->
     <link rel="stylesheet" href="../static/css/typo.css">
     <!--引入动画CSS插件-->
@@ -299,12 +299,12 @@
     <!--通过CDN引入Semantic-UI(也可通过本地下载引入)-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
 <!--    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.2/dist/semantic.min.js"></script>-->
-    <script src="../static/js/jquery.min.js"></script>
-    <script src="../static/js/semantic-ui-2.2.2-semantic.min.js"></script>
+    <script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../static/js/semantic-ui-2.2.2-semantic.min.js" th:src="@{/js/semantic-ui-2.2.2-semantic.min.js}"></script>
 
     <!--CDN引入平滑滚动的JS-->
 <!--    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>-->
-    <script src="../static/js/jquery.scrollTo.min.js"></script>
+    <script src="../static/js/jquery.scrollTo.min.js" th:src="@{/js/jquery.scrollTo.min.js}"></script>
 
     <!--引入代码高亮JS-->
     <script src="/lib/prism/prism.js"></script>

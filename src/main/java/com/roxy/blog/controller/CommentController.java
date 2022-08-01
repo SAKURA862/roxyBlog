@@ -61,7 +61,7 @@ public class CommentController {
         return "redirect:/comments/" + blogId;
     }
 
-    //    删除评论
+    // 删除评论
     @GetMapping("/comment/{blogId}/{id}/delete")
     public String delete(@PathVariable Long blogId, @PathVariable Long id, Comment comment, RedirectAttributes attributes, Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
@@ -69,7 +69,7 @@ public class CommentController {
             attributes.addFlashAttribute("message", "请先登录");
             return "blog";
         }
-        commentService.deleteComment(comment, id);
+        commentService.deleteComment(comment, id, blogId);
         DetailedBlog detailedBlog = blogService.getDetailedBlog(blogId);
         List<Comment> comments = commentService.listCommentByBlogId(blogId);
         model.addAttribute("blog", detailedBlog);

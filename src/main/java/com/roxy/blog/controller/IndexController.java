@@ -2,6 +2,7 @@ package com.roxy.blog.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.roxy.blog.constant.ConstantPool;
 import com.roxy.blog.dto.DetailedBlog;
 import com.roxy.blog.dto.FirstPageBlog;
 import com.roxy.blog.dto.RecommendBlog;
@@ -13,6 +14,8 @@ import com.roxy.blog.service.CommentService;
 import com.roxy.blog.service.TagService;
 import com.roxy.blog.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,15 +32,15 @@ import java.util.List;
 public class IndexController {
     @Autowired
     BlogService blogService;
-
     @Autowired
     TagService tagService;
-
     @Autowired
     TypeService typeService;
-
     @Autowired
     private CommentService commentService;
+    @Autowired
+    @Qualifier(value = "template")
+    private RedisTemplate<String, Object> redisTemplate;
 
     @GetMapping("/")
     public String toIndex(Model model, @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
@@ -68,7 +71,7 @@ public class IndexController {
     @GetMapping("/blog/{id}")
     public String toBlog(@PathVariable Long id, Model model) {
         DetailedBlog detailedBlog = blogService.getDetailedBlog(id);
-        List<Comment> comments = commentService.listCommentByBlogId(id);
+        List<Comment> comments = commentService.listCommentByBlogId(id);;
         model.addAttribute("comments", comments);
         model.addAttribute("blog", detailedBlog);
         return "blog";

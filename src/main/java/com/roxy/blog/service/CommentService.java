@@ -28,5 +28,5 @@ public interface CommentService {
      * @param comment 评论
      * @param id 评论 id
      */
-    void deleteComment(Comment comment, Long id);
+    void deleteComment(Comment comment, Long id, Long blogId);
 }
