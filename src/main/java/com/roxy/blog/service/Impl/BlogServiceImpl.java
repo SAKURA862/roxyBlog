@@ -1,5 +1,6 @@
 package com.roxy.blog.service.Impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.github.pagehelper.PageInfo;
 import com.roxy.blog.constant.ConstantPool;
 import com.roxy.blog.dao.BlogMapper;
@@ -14,6 +15,7 @@ import com.roxy.blog.utils.MarkdownUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -73,6 +75,7 @@ public class BlogServiceImpl implements BlogService {
     public int updateBlog(ShowBlog showBlog) {
         showBlog.setUpdateTime(new Date());
         int res = blogMapper.updateBlog(showBlog);
+        // 删除缓存
         redisTemplate.delete(ConstantPool.REDIS_DETAIL_BLOG_PREFIX + showBlog.getId());
         return res;
     }
@@ -82,6 +85,7 @@ public class BlogServiceImpl implements BlogService {
     public int deleteBlog(Long id) {
         blogMapper.deleteBlogAndTag(id);
         blogMapper.deleteBlog(id);
+        // 删除缓存
         redisTemplate.delete(ConstantPool.REDIS_DETAIL_BLOG_PREFIX + id);
         return 1;
     }
@@ -138,9 +142,13 @@ public class BlogServiceImpl implements BlogService {
             if (detailedBlog == null) {
                 throw new NotFountException("该博客不存在");
             }
-            Map<String, Object> tmp = (Map<String, Object>) BeanUtils.objectToMap(detailedBlog);
-            tmp.put("content", CompressUtils.deflateCompress((String) tmp.get("content")));
-            redisTemplate.opsForHash().putAll(ConstantPool.REDIS_DETAIL_BLOG_PREFIX + id, tmp);
+            else{
+                DetailedBlog tmpBlog = new DetailedBlog();
+                BeanUtil.copyProperties(detailedBlog, tmpBlog);
+                Map<String, Object> input = (Map<String, Object>) BeanUtils.objectToMap(tmpBlog);
+                input.put("content", CompressUtils.deflateCompress((String) input.get("content")));
+                redisTemplate.opsForHash().putAll(ConstantPool.REDIS_DETAIL_BLOG_PREFIX + id, input);
+            }
         }
         String content = detailedBlog.getContent();
         detailedBlog.setContent(MarkdownUtils.markdownToHtmlExtensions(content));

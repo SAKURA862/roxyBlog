@@ -18,3 +18,12 @@ normal_avatar:
 snow_flake:
   machine_id: 37
   data_center_id: 3
+
+async:
+  executor:
+    thread:
+      core_pool_size: 10
+      max_pool_size: 20
+      queue_capacity: 99999
+      name:
+        prefix: async-service-
